@@ -1,4 +1,4 @@
-package de.letscode.robocode.controls.radars;
+package de.philippsander.robocode.controls.radars;
 
 import robocode.ScannedRobotEvent;
 import robocode.util.Utils;

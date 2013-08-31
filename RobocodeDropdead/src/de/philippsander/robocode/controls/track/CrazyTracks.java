@@ -1,4 +1,4 @@
-package de.letscode.robocode.controls.tracks;
+package de.philippsander.robocode.controls.track;
 
 
 import robocode.HitWallEvent;

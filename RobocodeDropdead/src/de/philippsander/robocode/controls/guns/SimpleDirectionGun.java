@@ -1,4 +1,4 @@
-package de.letscode.robocode.controls.guns;
+package de.philippsander.robocode.controls.guns;
 
 import robocode.BulletHitBulletEvent;
 import robocode.BulletHitEvent;
@@ -41,19 +41,19 @@ public class SimpleDirectionGun extends AdvancedGun
 	@Override
 	public void handleScannedRobotEvent(final ScannedRobotEvent e)
 	{
-		
-		
+
+
 		double gunTurn =
 				// Absolute bearing to target
-				(getRobot().getHeadingRadians() + e.getBearingRadians())
+				(this.getRobot().getHeadingRadians() + e.getBearingRadians())
 				// Subtract current gun heading to get turn required
-						- getRobot().getGunHeadingRadians();
+				- this.getRobot().getGunHeadingRadians();
 
-				getRobot().setTurnGunRightRadians(
-						Utils.normalRelativeAngle(gunTurn));
-				
+		this.getRobot().setTurnGunRightRadians(
+				Utils.normalRelativeAngle(gunTurn));
+
 		//getRobot().setFire(Rules.MAX_BULLET_POWER * 75 / e.getDistance());
-		getRobot().setFire(Rules.MAX_BULLET_POWER);
+		this.getRobot().setFire(Rules.MAX_BULLET_POWER);
 	}
 
 }

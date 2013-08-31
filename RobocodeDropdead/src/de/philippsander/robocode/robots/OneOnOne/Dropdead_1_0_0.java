@@ -2,6 +2,9 @@ package de.philippsander.robocode.robots.OneOnOne;
 
 import java.awt.Color;
 
+import de.philippsander.robocode.controls.guns.SimpleDirectionGun;
+import de.philippsander.robocode.controls.radars.TurnMultiplierLock;
+import de.philippsander.robocode.controls.track.RamTracks;
 import de.philippsander.robocode.core.compositions.AdvancedRobotComposition;
 /**
  * 
@@ -23,8 +26,9 @@ public class Dropdead_1_0_0 extends AdvancedRobotComposition {
 
 	@Override
 	protected void initControls() {
-		// TODO Auto-generated method stub
-
+		this.setRadar(new TurnMultiplierLock(this));
+		this.setTrack(new RamTracks(this));
+		this.setGun(new SimpleDirectionGun(this));
 	}
 
 }

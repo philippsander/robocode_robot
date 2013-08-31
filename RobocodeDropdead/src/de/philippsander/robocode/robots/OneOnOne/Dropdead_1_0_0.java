@@ -1,4 +1,4 @@
-package de.philippsander.robocode.robots;
+package de.philippsander.robocode.robots.OneOnOne;
 
 import robocode.AdvancedRobot;
 
